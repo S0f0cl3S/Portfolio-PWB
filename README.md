@@ -1,6 +1,8 @@
 # Portfolio-PWB
 Disciplina: Programação Web e Mobile 
+
 Discente: Bueno 
+
 Estudante: Gabriel Martins de Souza 
 
 Observação: Bueno, 90% dos commits vão ser de grandes pois o site já havia sido feito antes, logo não vai haver tanta progressividade dos commits,
