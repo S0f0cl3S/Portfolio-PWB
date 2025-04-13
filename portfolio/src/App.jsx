@@ -60,8 +60,6 @@ function BullsAndCows() {
         bulls++;
       }
     }
-
-    // Conta cows (dígitos corretos na posição errada)
     for (let i = 0; i < 4; i++) {
       if (secretNumber.includes(guess[i]) && guess[i] !== secretNumber[i]) {
         cows++;
@@ -97,7 +95,12 @@ function BullsAndCows() {
     }
     setSecretNumber(secret);
   };
-
+  
+  const handleGiveUp = () => {
+    setMessage(`Você desistiu! O número secreto era ${secretNumber}`);
+    setGameOver(true);
+  };
+  
   return (
     <div className="game-container">
       <h2>Bulls and Cows</h2>
@@ -149,7 +152,6 @@ function App() {
   const sectionsRef = useRef([]);
 
   useEffect(() => {
-    // Observador de interseção para animações
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
