@@ -365,3 +365,28 @@ h1 {
   background-color: #FFD700;
   transform: translateY(-3px);
 }
+
+
+
+.game-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.give-up-button {
+  background-color: #ff4444;
+  color: white;
+}
+
+.give-up-button:hover {
+  border-color: #cc0000;
+  background-color: #cc0000;
+}
+
+.game-message b {
+  color: #646cff;
+  font-size: 1.2em;
+}
+
+
