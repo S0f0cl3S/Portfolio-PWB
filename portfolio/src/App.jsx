@@ -30,7 +30,6 @@ function BullsAndCows() {
   const [gameOver, setGameOver] = useState(false);
 
   useEffect(() => {
-    // Gera um número secreto de 4 dígitos sem repetição
     const generateSecretNumber = () => {
       const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
       let secret = '';
@@ -54,7 +53,6 @@ function BullsAndCows() {
     let bulls = 0;
     let cows = 0;
 
-    // Conta bulls (dígitos corretos na posição correta)
     for (let i = 0; i < 4; i++) {
       if (guess[i] === secretNumber[i]) {
         bulls++;
@@ -119,11 +117,21 @@ function BullsAndCows() {
           maxLength="4"
           disabled={gameOver}
         />
-        <button onClick={handleGuess} disabled={gameOver}>
-          Tentar
-        </button>
+        
+        <div className="game-buttons">
+          <button onClick={handleGuess} disabled={gameOver}>
+            Tentar
+          </button>
+          <button 
+            onClick={handleGiveUp} 
+            disabled={gameOver}
+            className="give-up-button"
+          >
+            Desistir
+          </button>
+        </div>
       </div>
-
+      
       {message && <p className="game-message">{message}</p>}
 
       <div className="game-history">
