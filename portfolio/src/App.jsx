@@ -99,7 +99,7 @@ function BullsAndCows() {
     setGameOver(true);
   };
   
-  return (
+    return (
     <div className="game-container">
       <h2>Bulls and Cows</h2>
       <p className="game-instructions">
@@ -117,7 +117,6 @@ function BullsAndCows() {
           maxLength="4"
           disabled={gameOver}
         />
-        
         <div className="game-buttons">
           <button onClick={handleGuess} disabled={gameOver}>
             Tentar
